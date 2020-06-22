@@ -439,7 +439,7 @@ nav.stroke ul li a:hover:after {
 
 .item4 {
 	background: linear-gradient( rgba(219,150,0,0.25), rgba(219,150,0,0.1)), /* bottom, image */
-	url("img/4.jpg");
+	url("img/4.JPG");
 	background-origin: content-box;
 	background-size: 300px auto;
 	background-position: center;
@@ -447,7 +447,7 @@ nav.stroke ul li a:hover:after {
 }
 .item4:hover {
 	background: linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), /* bottom, image */
-	url("img/4.jpg");
+	url("img/4.JPG");
 	background-origin: content-box;
 	background-size: 300px auto;
 	background-position: center;
@@ -480,7 +480,7 @@ nav.stroke ul li a:hover:after {
 }	
 .contact {
 	background: linear-gradient( rgba(219,150,0,0.25), rgba(219,150,0,0.1)), /* bottom, image */
-	url("img/contat.jpg");
+	url("img/contat.JPG");
 	background-origin: content-box;
 	background-size: 300px auto;
 	background-position: center;
@@ -489,7 +489,7 @@ nav.stroke ul li a:hover:after {
 
 .contact:hover {
 	background: linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), /* bottom, image */
-	url("img/contat.jpg");
+	url("img/contat.JPG");
 	background-origin: content-box;
 	background-size: 300px auto;
 	background-position: center;
