@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/*----------- objects ---------------*/
+body{min-height:200vh;
+	color: rgb(25, 25, 112);
+	background-color: rgb(234, 234, 250);
+	font-family: 'Cormorant Garamont', serif;}
+
+
+
+/* ----------- OVERALL CLASSES ----------*/
+
+.navhr {
+	border-color: rgb(234, 234, 250);
+}
+.padding {
+	padding: 1.2rem;
+}
+.maxwidth {
+	max-width: 75%;
+	margin: 0 auto;
+}
+.no-padding {
+	padding:0;
+}
+.no-margin {
+	margin:0;
+}
+
+
+/*------------------------*/
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: ghostwhite; /* Blue*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgba(25, 25, 112, 0.8);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: rgba(25, 25, 112, 1);
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 20px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgba(25, 25, 112, 1);
+  padding: 2px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 5px;
+  float: right;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media (min-width: 768px) {
+	#main {
+		display: none;
+	}
+}
+
+/*----------------------*/
+
+
+
+/*----------------------------------*/
+/* ---------1. NAVBAR --------------*/
+/*----------------------------------*/
+
+.navbar {
+	padding: .8rem;
+}
+.navbar-brand{  
+	margin-left: 25px;
+}
+nav .navbar-nav li a {
+	font-size: 1.2rem !important;
+	font-weight: 600;
+	color: rgba(25, 25, 112, 0.8) !important;
+	padding-bottom: 0;
+	margin: 0 7px;
+	text-transform: uppercase;
+}
+
+/*-- change toggler color on stroke =' rgb ' --*/
+.navbar-toggler-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*--- Animation for scrolling ---*/
+.navbar{
+  transition:500ms ease;
+  background:transparent;
+}
+.navbar.scrolled{
+  background:ghostwhite;
+}
+
+/*---/Animation for scrolling ---*/
+/*--- Animation for selection ----*/
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: rgba(25, 25, 112, 1) !important;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: rgba(25, 25, 112, 1);
+  height: 3px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+/*--- /Animation for selection ----*/
+
+/*-------------------------------------------*/
+/* ---------2. CAROUSEL SLIDES --------------*/
+/*-------------------------------------------*/
+
+.carousel {
+	height: 100vh;
+}
+.carousel-item {
+	height: 100vh;
+	background: no-repeat center center scroll;
+	background-size: cover;
+}
+.carousel-item img {
+  	width: 100%;
+  	height: 100vh;
+  	object-fit: cover;
+  	opacity: 0.5;
+}
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+
+}
+.carousel-caption h1{
+	font-family: 'Parisienne', cursive;
+	font-size: 350%;
+	text-shadow: 3px 3px 8px white;
+	color: rgba(25, 25, 112, 1);
+}
+.carousel-caption h3 {
+	font-size: 1.5rem;
+	text-shadow: 1px 1px 8px white;
+	color: rgba(25, 25, 112, 1);
+}
+.carousel-caption button {
+	background-color: rgba(25, 25, 112, 1);
+	color: ghostwhite;
+	border-radius: 0;
+	border-color: rgba(25, 25, 112, 1);
+}
+.carousel-caption button:hover {
+	background-color: rgba(25, 25, 112, 0.5);
+	color: rgba(25, 25, 112, 1);
+	border-color: rgba(25, 25, 112, 0.5);
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0px 5px;
+    border-radius: 50%;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    background-color:  rgba(25, 25, 112, 0.5);
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.carousel-indicators .active {
+    background-color:  rgba(25, 25, 112, 1);
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*-------------------------------------------*/
+/* ---------3. OUR STORY------ --------------*/
+/*-------------------------------------------*/
+
+/*--JUST FOR DISPLAY IMG WHEN NOT MOBILE --*/
+@media (max-width: 992px) {
+	.nomobile img {
+		display: none;
+	}	
+}
+.story img {
+	margin-bottom: 35px;
+}
+.story p {
+	text-align: justify;
+	color: black;
+}
+.story .textsection {
+	background: ghostwhite;
+}
+.fa-tree {
+	font-size: 20px;
+}
+
+/*-------------------------------------------*/
+/* ---------5. OUR PLAN------ --------------*/
+/*-------------------------------------------*/
+
+#ourplan p {
+	color:black;
+}
+
+/*-------------------------------------------*/
+/* ---------6. FIXED BACKGROUND--------------*/
+/*-------------------------------------------*/
+
+.parallax {
+  /* The image used */
+  background-image: url("img/fixed.jpg");
+  opacity: 0.75;
+
+  /* Set a specific height */
+  min-height: 300px;
+  max-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-------------------------------------------*/
+/* ---------7. OUR WORK----------------------*/
+/*-------------------------------------------*/
+.ourwork .row {
+	align-items: center;
+	align-self: center;
+}
+.fa-facebook, .fa-instagram, .fa-youtube {
+	font-size: 20px;
+	margin: 5px 15px;
+	color: rgba(25,25,112,1);
+}
+
+.fa-facebook:hover, .fa-instagram:hover, .fa-youtube :hover {
+	color: rgba(25,25,112,0.2);
+}
+
+.social {
+	width: 50%;
+	border-bottom: 1px solid rgba(25,25,112,1);
+}
+
+/*--------owl-carousel ----------*/
+.owl-theme .owl-dots .owl-dot span {
+	background-color: rgba(25,25,112,0.5);
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+	background-color: rgba(25,25,112,1)
+}
+
+/*-------------------------------------------*/
+/* ---------8. JUMBROTRON--------------------*/
+/*-------------------------------------------*/
+
+.jumbotron {
+	background-color: rgba(25,25,112,0.85);
+	border-radius: 0;
+	margin: 20px 0 !important;
+}
+
+.jumbotron p{
+	font-size: 1.5rem;
+	color: ghostwhite !important;
+}
+.jumbotron button {
+	background-color: ghostwhite;
+	border: 1px solid ghostwhite;
+	color: rgba(25,25,112,1);
+	border-radius: 0;
+}
+.jumbotron button:hover {
+	box-shadow: inset 0px 0px 10px black;
+	-moz-box-shadow: inset 0 0 10px black;
+   -webkit-box-shadow: inset 0 0 10px black;
+  	background-color: ghostwhite !important;
+  	border: 1px solid ghostwhite !important;
+	color: rgba(25,25,112,1) !important;
+}
+
+
+/*-------------------------------------------*/
+/* ---------9. FORM--------------------------*/
+/*-------------------------------------------*/
+form label {
+	font-size: 1.5rem !important;
+	margin: 0;
+}
+form .textfill{
+	font-size: 1.2rem;
+	width: 100%;
+	padding: 10px 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+form .textarea {
+	min-height: 80px;
+	font-size: 1.2rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	padding: 10px 15px;
+	margin: 8px 0;
+}
+form p {
+	margin-bottom: 0.2rem;
+	margin-top: 0.2rem;
+}
+
+form .button {
+	width: 100%;
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+	background-color: rgba(25,25,112,1);
+	color: ghostwhite;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+form .button:hover {
+	background-color: rgba(25,25,112,0.5);
+}
+
+/*--------/FORM-----------*/
+/*-------------------------------------------*/
+/* ---------10. VIDEO------------------------*/
+/*-------------------------------------------*/
+.h_iframe {
+	position: relative;
+}
+	
+.h_iframe .ratio {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.h_iframe iframe {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*-------------------------------------------*/
+/* ---------10. OFFERS-----------------------*/
+/*-------------------------------------------*/
+
+.plans {
+	background-color: ghostwhite;
+	margin-bottom: 35px;
+}
+.plans h4 {
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.plans p {
+	text-align: justify;
+}
+.plans button {
+	background-color: rgba(25,25,112,1);
+	color: ghostwhite;
+	width: 100%; 
+}
+.plans button:hover {
+	background-color: rgba(25,25,112,0.5);
+}
+
+/*-------------------------------------------*/
+/* ---------11. FOOTER-----------------------*/
+/*-------------------------------------------*/
+
+footer {
+  padding: 81px 0 32px 0;
+  margin-top: 50px 0;
+  background-color: rgba(25,25,112,0.1);
+}
+
+footer,
+footer a,
+.footer-social li a {
+  color: black;
+}
+footer ul {
+	padding-left: 5px;
+}
+
+.foo-block,
+.widget-footer {
+  margin-bottom: 36px;
+}
+.foo-block .widgettitle {
+  color: rgba(25,25,112,0.75);
+}
+
+.copyright {
+  margin-top: 18px;
+  display: flex;
+}
+
+.footer-copy {
+  font-size: 12px;
+  letter-spacing: 1px;
+  flex: 1 1 auto;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+/*-------------------------------------------*/
+/* ---------12. MEDIAQUERIES-----------------*/
+/*-------------------------------------------*/
+
+
+/*Small (sm) devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+	/*Medium (md) devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large (lg) devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+	.carousel-caption h1{
+		font-size: 500%;
+	}
+	.story img {
+		margin-bottom: 0;
+	}
+	.h_iframe {
+		margin-top: 50px;
+	}
+}
+
+/*Extra (xl) large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	.carousel-caption h1{
+		font-size: 600%;
+	}
+}

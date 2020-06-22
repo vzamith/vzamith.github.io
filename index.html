@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Olivia Paiva Arquitetura</title>
-	<!--Owl Carousel 
+	<title>Wedding Photography</title>
+	<!--Owl Carousel -->
 	<link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.theme.default.min.css">-->
+	<link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.theme.default.min.css">
 	<!-- Boostrap library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- JQUERY -->
@@ -17,37 +17,34 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<!-- SOCIAL MEDIA ICONS LIBRARY -->
 	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-
-	<script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
 	
-	<link href="style.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	
+	<link href="style2.css" rel="stylesheet">
 </head>
 <body>
 
-<!-------NAVBAR------------->
-<nav class="navbar navbar-inverse navbar-fixed-left stroke" id="navbar" role="naviagation">
-	<a class="navbar-brand" href="#slides"> <img src="img/logo2.png" alt="Company logo"></a>
+<!-----
+	*************NAVBAR*******
+								-->
+<nav class="navbar navbar-expand-md fixed-top stroke" id="navbar" role="naviagation">
+	<div class="container-fluid">
+	<a class="navbar-brand" href="#slides"> <img src="img/logo2.png" alt="Company logo" width="30"></a>
 	<!-- mobile menu toggle sidebar -->
 	<div id="mySidebar" class="sidebar">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<br><br>
- 			<div>
-  			<a href="#" onclick="openSobre()">sobre</a>
-			<a href="#" onclick="openProj1()">projeto</a>
-			<a href="#" onclick="OpenCont()">contatos</a>
-			</div>
-		<br> <br>
-		<div class="contato">
-			<ul>
-				<li> T: +351 555 555 </li>
-				<li> Lisboa, PT </li><a class="social-instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-			</ul>
+		<div>
+ 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="#">About</a>
+			<a href="#">Plan</a>
+			<a href="#">Work</a>
+			<a href="#">Contact</a>
+			<a href="#">Offers</a>
 		</div>
-		<!--<div class="social-menu">
+		<div class="social-menu">
             <a class="social-facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
         	<a class="social-youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
           	<a class="social-instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-		</div>-->
+		</div>
 	</div>
 	<div id="main">
  		<button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -55,420 +52,410 @@
 	<!--/mobile menu toggle sidebar -->
 	<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
     	<span class="navbar-toggler-icon"></span>
-  	</button> -->
-	<ul class="navbar-nav ml-auto">
-		<li class="nav-item ">
-			<a class ="nav-link" href="index.html"> home <span class="sr-only">(current)</span> </a></li>
-		<li class="nav-item">
-			<a class ="nav-link" href="#" onclick="openSobre()"> sobre </a></li>
-		<li class="nav-item">
-			<a class ="nav-link" href="#" onclick="openProj1()"> projetos </a></li>
-		<li class="nav-item">
-			<a class ="nav-link" href="#" onclick="openCont()"> contatos </a></li>
-		<li class="nav-item">
-			<a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
-	</ul>
+  	</button>-->
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav mx-auto float-center">
+			<li class="nav-item ">
+				<a class ="nav-link" href="index.html"> Home <span class="sr-only">(current)</span> </a></li>
+			<li class="nav-item">
+				<a class ="nav-link" href="#about"> About </a></li>
+			<li class="nav-item">
+				<a class ="nav-link" href="#plan"> Plan </a></li>
+			<li class="nav-item">
+				<a class ="nav-link" href="#work"> Work </a></li>
+			<li class="nav-item">
+				<a class ="nav-link" href="#contact"> Contact </a></li>
+			<li class="nav-item">
+				<a class ="nav-link" href="#offers"> Offers </a></li>
+		</ul> 
+	</div>
 </nav>
 
-<!------------------IMG GRID -------------------->
-<div id="opacity">
-	<div class="container grid">
-		<div class="row justify-content-end titles">
-			<div class="col-md-3 col-sm-5 float-left">
-				<h2> sobre </h2>
-			</div>
-			<div class="col-md-3 col-sm-5 float-right">
-				<h2> projetos </h2>
-			</div>
-			<div class="col-3">
-				<p> </p>
-			</div>
-			
-		</div>
-		<div class="row grid-item justify-content-end">
-			<div class="col-md-3 col-sm-5 col-xs-12 profile">
-				<button class="profile_button" onclick="openSobre()"></button>
-			</div>
-			<div class="col-md-3 col-sm-5 item1">
-				<button class="profile_button" onclick="openProj1()"></button>
-			</div>
-			<div class="col-md-3 col-sm-5 item2">
-				<button class="profile_button" onclick="openProj2()"></button>
+<!-----
+	*************CAROUSEL*******
+								-->
+<div id="slides" class="carousel slides" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="d-block" src="img/slide1.jpg" alt="slide1">
+			<div class="carousel-caption">
+				<h1 class="brand"> Memorize </h1>
+				<h3> You will never forget </h3>
+				<button class="btn btn-secondary" target="_blank" href=""> CHECK OUR AGENDA </button>
 			</div>
 		</div>
-		<div class="row grid-item justify-content-end">
-			<div class="col-md-3 col-sm-5 contact-title">
-				<h3> contatos </h3>
-			</div>
-			<div class="col-md-3 col-sm-5 item3">
-				<button class="profile_button" onclick="openProj3()"></button>
-			</div>
-			<div class="col-md-3 col-sm-5 item4">
-				<button class="profile_button" onclick="openProj4()"></button>
-			</div>
+		<div class="carousel-item">
+			<img class="d-block" src="img/slide2.jpg" alt="slide2">
 		</div>
-		<div class="row grid-item justify-content-end">
-			<div class="col-md-3 col-sm-5 contact">
-				<button class="profile_button" onclick="openCont()"></button>
-			</div>
-			<div class="col-md-3 col-sm-5 order-12">
-			</div>
-			<div class="col-md-3 col-sm-5 item5 order-1">
-				<button class="profile_button" onclick="openProj5()"></button>
+		<div class="carousel-item">
+			<img class="d-block" src="img/slide3.jpg" alt="slide3">
 		</div>
+	<hr class="navhr" id="about">
 	</div>
 </div>
-</div>
-<!----------------/IMG GRID --------------------->
-
-<!------- SOBRE ----------->
-
-<div id="Sobre" class="sobre_sidebar">
-		<div class="sobre">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeSobre()">&times;</a>
-			<h3> Sobre</h3>
-			<img src="img/sobre.jpg">
-			<div class="texto">
-			<p> Arquiteta e Urbanista formada na Universidade Federal do Rio de Janeiro com Mestrado em Urbanismo Sustentável na 
-			Universidade NOVA de Lisboa. Tem apreço e experiência por projetos envolvendo o espaço público e a revitalização do mesmo.
-			Participou da publicação de dois artigos durante sua carreira universitária e com projetos selecionaods para exposição </p>
-			</div>
-			<p> Histórico Acadêmico </p>
-			<ul>
-				<li> Curso Profissionalizante em Edificações em 2011 </li>
-				<li> Arquiteta e Urbanista pela UFRJ em 2018.</li>
-				<li> Mestrado em Urbanismo Sustentável em 2020. </li>
-			</ul>
+<br><br>
+<!-----
+	*************STORY*******
+								-->
+<div class="container-fluid story">
+	<div class="row text-center align-items-stretch padding">
+		<div class="col-12 col-md-6 col-lg-4 align-self-center">
+			<img class="img-fluid" src="img/story.jpg" alt="">
 		</div>
-</div>
-
-<div id="contatos" class="sobre_sidebar">
-		<div class="contato">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeCont()">&times;</a>
-			<h3> contato </h3>
-			<div class="texto">
-			<p> Para mais informações ou orçamentos, mande-nos um e-mail!
-			</p>
-			<div class="form">
-				<form>
-					<input type="e-mail" name="e-mail" id="email" placeholder="Insira seu e-mail">
-					<textarea name="question" id="question" placeholder="Escreva sua pergunta para nós!"></textarea>
-					<input type="submit" id="submit" value="submit">
-				</form>
-			</div>
-			<p> Caso prefira, acesse nossas redes sociais! </p>
-			</div>
-			<div class="contatos_sidebar">
-			<ul>
-				<li>
-				<a class="social-contatos" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-				<a class="social-contatos" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-				<a class="social-contatos" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-				</li>
-				<li> T: +351 555 555 </li>
-				<li> Lisboa, PT </li>
-			</ul>
-			</div>
-		</div>
-</div>
-
-<div id="projeto1" class="sobre_sidebar projetos">
-		<div>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeProj1()">&times;</a>
-			<a href="#" class="next round" onclick="nextProject12()">&#8250;</a>
-			<h3> (Re)Descobrindo o Tejo</h3>
-			<img src="img/2.jpg">
-			<p> Projeto apresentado no Encontro UniverCidades 2020, Lisboa. </p>
-			<p> Requalificação do Tejo, Lisboa. </p>
-			<div class="texto">
-			<p>Este projeto foi desenvolvido em equipa para a cadeira ‘’Projeto em Urbanismo
-			Sustentável e Ordenamento do Território, e apresentado no CIUL - Centro de Informação
-			Urbana de Lisboa para a Câmara. O tema abordado para a cadeira deveriam ser
-			as alterações climáticas. </p>
-			</div>
-			<p> Informações do projeto: </p>
-			<ul>
-				<li> Tipo: Requalificação Espaço Urbano </li>
-				<li> Localização: Lisboa </li>
-				<li> Ano: 2020. </li>
-			</ul>
-		</div>
-</div>
-<div id="projeto2" class="sobre_sidebar projetos">
-		<div>
-			<a href="#" class="previous round" onclick="prevProject21()">&#8249;</a>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeProj2()">&times;</a>
-			<a href="#" class="next round" onclick="nextProject23()">&#8250;</a>
-			<h3> Trapicheiros: Requalificação</h3>
-			<img src="img/1.jpg">
+		<div class="col-12 col-md-6 col-lg-4 textsection">
+			<h2 class="display-4"> Our story </h2>
 			<br>
-			<p> Trabalho final de graduação, Rio de Janeiro. </p>
-			<div class="texto">
-			<p>O Bairro da Tijuca, localizado na zona norte da Cidade do Rio de Janeiro possui
-			uma centralidade pulsante focada na Praça Saens Pena que não se expande igualmente
-			para o seu entorno imediato. A Avenida Gabriela Prado Maia Ribeiro, paralela a
-			Praça, mesmo extremamente próxima não possui dinâmica que atraia o pedestre. Do
-			mesmo modo a Avenida Heitor Beltrão, localizada entre a Praça Saens Pena e a Praça
-			São Francisco Xavier, é esvaziada de fuxo dos moradores</p>
-			</div>
-			<p> Informações do projeto: </p>
-			<ul>
-				<li> Tipo: Requalificação Urbana </li>
-				<li> Localização: Rio de Janeiro </li>
-				<li> Ano: 2018 </li>
-			</ul>
+			<p> We are a 15 year old company specialized in wedding photography. We have done over a thousand events in the past years and have a tailor made package just for you. We are a passionate about recording that special day with digital and physical materials for you to always remember.
+			We love to find those shots and scenes that define your personality and the romanticism present in the cerimony. </p>
 		</div>
-</div>
-<div id="projeto3" class="sobre_sidebar projetos">
-		<div>
-			<a href="#" class="previous round" onclick="prevProject32()">&#8249;</a>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeProj3()">&times;</a>
-			<a href="#" class="next round" onclick="nextProject34()">&#8250;</a>
-			<h3> Biblioteca da Mangueira</h3>
-			<img src="img/3.jpg">
-			<p> Projeto de Biblioteca para a favela da Mangueira. </p>
-			<div class="texto">
-			<p>Projeto localizado próximo ao Estádio Maracanã, Quinta da Boa Vista e comunidade
-			da Mangueira, na Cidade do Rio de Janeiro. A proposta consiste na construção
-			de uma Biblioteca Parque voltada para o público de crianças e jovens e que proporcione
-			suporte a comunidade da Mangueira.</p>
-			</div>
-			<p> Informações do projeto: </p>
-			<ul>
-				<li> Tipo: Biblioteca Pública</li>
-				<li> Localização: Rio de Janeiro </li>
-				<li> Ano: 2016 </li>
-			</ul>
+		<div class="col-12 col-md-6 col-lg-4 nomobile align-self-center">
+			<img class="img-fluid" src="img/story2.jpg" alt="">
 		</div>
-</div>
-<div id="projeto4" class="sobre_sidebar projetos">
-		<div>
-			<a href="#" class="previous round" onclick="prevProject43()">&#8249;</a>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeProj4()">&times;</a>
-			<a href="#" class="next round" onclick="nextProject45()">&#8250;</a>
-			<h3> Residência Estudantil </h3>
-			<img class="half" src="img/41.JPG">
-			<p> Projeto selecionado para Exposição. </p>
-			<div class="texto">
-			<p>A proposta de intervenção urbanística se baseia na intenção de revitalizar o
-			Largo. Com a proposta arquitetônica sendo a criação de um alojamento estudantil de
-			apoio ao IFCS, através de uma análise do terreno optou-se por uma valorização dos
-			espaços livres de convívio assim como o espaço do Largo.</p>
-			</div>
-			<p> Informações do projeto: </p>
-			<ul>
-				<li> Tipo: Residência + Intervençãõ urbanística </li>
-				<li> Localização: Rio de Janeiro </li>
-				<li> Ano: 2014 </li>
-			</ul>
-		</div>
-</div>
-<div id="projeto5" class="sobre_sidebar projetos">
-		<div>
-			<a href="#" class="previous round" onclick="prevProject54()">&#8249;</a>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeProj5()">&times;</a>
-			<h3> Reforma de Cozinha </h3>
-			<img src="img/5.png">
-			<p> Projeto de Interiores para cliente externo. </p>
-			<div class="texto">
-			<p> Obra de reforma para cozinha de uma residência na região da Barra da Tijuca no Rio de Janeiro. Projeto foi feito para criar
-			um ambiente de acolhimento familiar e que proporcione um ambiente iluminado, ventilado e espaçoso para reuniões familiares e 
-			os afazers do dia a dia de uma cozinha tradicional. </p>
-			</div>
-			<p> Informações do projeto: </p>
-			<ul>
-				<li> Tipo: Reforma </li>
-				<li> Localização: Rio de Janeiro </li>
-				<li> Ano: 2020 </li>
-			</ul>
-		</div>
+	</div>
+<hr id="plan">	
 </div>
 
+<!-----
+	*************OURPLAN*******
+								-->
 
-<!--------/NAVBAR -------------------------->
-<!-- OWL CAROUSEL 
-<div class="carousel-container">
-<div class="owl-carousel owl-theme">
-    <div class="item">
-    	<div class="img1"></div></div>
-    <div class="item">
-    	<div class="img2"></div></div>
-    <div class="item">
-    	<div class="img3"></div></div>
-</div>
-</div>-->
-<!------------------break ------------------
-<div class="break"></div>
--/---------------break ---------------->
-<!--
-<main>
-<div class="container sobre" id="sobre">
-	<div class="row row1">
-		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 text">
-			<h3> sobre </h3>
-			<h2> Olívia Paiva </h2>
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sollicitudin magna, quis euismod felis. Nullam quis mollis sem. Sed sagittis porttitor mi ac interdum. Aenean eu lectus nibh. Duis ligula lectus, luctus in felis a, elementum auctor neque. In in quam arcu. Nullam vestibulum lorem et sem feugiat venenatis. Quisque at mauris tortor. Proin sed eros sed sapien iaculis tincidunt nec eget sapien. Etiam mattis convallis lacus sit amet posuere. In a orci erat. Vestibulum elementum quam auctor, rhoncus tortor vitae, aliquam enim. Suspendisse sed imperdiet eros, in tristique massa.</p>
+<div class="container-fluid padding" id="ourplan">
+<div class="row text-center align-item-center justify-content-between">
+	<div class="col-12">
+		<h2 class="display-4"> Our plan </h2>
+		<p> Everything to remember this moment </p>
+	</div>
+	<div class="col-12 col-md-6 col-lg-3 icons padding">
+		<i class="fas fa-tree"></i>
+		<div class="text-center plan">
+			<h3 class="title"> Photoshoot </h3>
+			<p> In a location chosen by the couple to celebrate your love. We help you choose it. </p>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 profile">
-			<img src="img/profile.jpg" alt="profile picture">
+	</div>
+	<div class="col-12 col-md-6 col-lg-3 icons padding">
+		<i class="fas fa-spa"></i>
+		<div class="text-center">
+			<h3 class="title"> Spa Day </h3>
+			<p> That behind the scenes look. We want to capture all the feelings in that beautiful moment. </p>
+		</div>
+	</div>
+	<div class="col-12 col-md-6 col-lg-3 offset-md-3 offset-lg-0 icons padding">
+		<i class="fas fa-glass-cheers"></i>
+		<div class="text-center">
+			<h3 class="title"> The Day </h3>
+			<p> A full coverage of the ceremony and the party, with our crew of 3 photographers.</p>
 		</div>
 	</div>
 </div>
-</main>-->
+</div>
+<hr class="navhr" id="work">-
+
+<!-----
+	*************FIXED BACKGROUND*******
+								-->
+
+<div class="parallax"></div>
+<br><br>
+
+<!-----
+	*************OURWORK*******
+								-->
+<div class="container-fluid padding" id="ourwork">
+	<div class="row maxwidth text-center">
+		<div class="col-12">
+			<h2 class="display-4"> Our Work </h2>
+			<p> Check some of our shots and, if still in doubt, contact us via our form.
+			Don't forget to check our social medias and portfolio. </p>
+		</div>
+		<div class="col-12 social">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+</div>
+<br>
+<div class="carousel-container">
+	<div class="owl-carousel owl-theme">
+		<div class="item">
+			<img src="img/port1.jpg" alt="cerimony example photo"> 
+		</div>
+		<div class="item">
+			<img src="img/port3.png" alt="spaday example photo">
+		</div>
+		<div class="item">
+			<img src="img/port2.jpg" alt="photoshoot example photo">
+		</div>
+		<div class="item">
+			<img src="img/port4.jpg" alt="example photo">
+		</div>
+		<div class="item">
+			<img src="img/port5.jpg" alt="cerimony example photo"> 
+		</div>
+		<div class="item">
+			<img src="img/port6.jpg" alt="spaday example photo">
+		</div>
+		<div class="item">
+			<img src="img/port7.jpg" alt="photoshoot example photo">
+		</div>
+		<div class="item">
+			<img src="img/port8.jpg" alt="example photo">
+		</div>
+	</div>
+</div>
+<br>
+<!-----
+	*************JUMBOTRON*******
+								-->
+
+<div class="container-fluid no-padding">
+<div class="row jumbotron text-center">
+	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+	<!-- bootstrap for lightweight text -->
+		<p class="lead"> Want to see more of our work? Check our full portfolio! </p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+		<button class="btn btn-primary"> Go to Portfolio! </button>
+	</div>
+</div>
+<hr class="navhr" id="contact">
+</div>
+<!-----
+	*************CONTACT*******
+								-->
+
+<div class="container-fluid padding" id="ourwork">
+	<div class="row maxwidth text-center">
+		<div class="col-12">
+			<h2 class="display-4"> Contact Us </h2>
+			<p> Want to know more or have questions about booking it? Send us an email and check our insitutional video. </p>
+		</div>
+	</div>
+</div>
+<!-- Two section part -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-12 col-lg-6">
+		<div class="form">
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<div>
+					<label for="email"> <p> Insert your email</p></label>
+					<input type="email" id="email" class="textfill" name="email" placeholder="Insert your email for us to get back to you">
+				</div>
+				<div>
+					<label for="name"> <p> Write your name </p></label>
+					<input type="text" class="textfill" name="name" placeholder="How should we call you?">
+				</div>
+				<div>
+					<label for="questions"> <p> Write us your questions! </p></label>
+					<textarea id="questions" name="questions" class="textarea" placeholder="Don't hold anything back, we got you!"></textarea>
+				</div>
+				<div>
+					<input id="submit" class="button" type="submit" name="submit"> 
+				</div>
+			</form>
+		</div>
+		</div>
+
+		<div class="col-12 col-lg-6">
+		<div class="video">
+			<div class="h_iframe">
+				<img class="ratio" src="https://i.imgur.com/0Gf8Vgc.png">
+				<iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/2PatRkIP6ME" frameborder="0">
+				</iframe>
+			</div>
+		</div>
+		</div>
+	</div>
+<hr id="offers">
+</div>
+<!-----
+	*************OFFERS*******
+								-->
+
+<div class="container-fluid padding" id="offers">
+<div class="row maxwidth text-center">
+	<div class="col-12">
+		<h2 class="display-4"> Our base offers</h2>
+		<p> Check what we offer and the starting budget. </p>
+	</div>
+</div>
+<div class="container-fluid padding">
+	<div class="row plans justify-content-between padding">
+		<div class="col-xs-6 col-sm-4">
+			<h4> Lasting </h4>
+		</div>
+		<div class ="col-xs-6 col-sm-4">
+			<p> This set includes great material to save the moment</p>
+			<ul>
+				<li> Hardcover photo album </li>
+				<li> HD Movie of 2 phases </li>
+				<li> Polaroid + 3 Prints </li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<button class="btn btn-secondary"><b> Select </b></button>
+		</div>
+	</div>
+	<div class="row plans justify-content-between padding">
+		<div class="col-xs-6 col-sm-4">
+			<h4> Lifelong </h4>
+		</div>
+		<div class ="col-xs-6 col-sm-4">
+			<p> This set includes great material to save the moment</p>
+			<ul>
+				<li> Hardcover photo album </li>
+				<li> HD Movie of 2 phases </li>
+				<li> Polaroid + 3 Prints </li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<button class="btn btn-secondary"><b> Select </b></button>
+		</div>
+	</div>
+	<div class="row plans justify-content-between padding">
+		<div class="col-xs-6 col-sm-4">
+			<h4> Forever </h4>
+		</div>
+		<div class ="col-xs-6 col-sm-4">
+			<p> This set includes great material to save the moment</p>
+			<ul>
+				<li> Hardcover photo album </li>
+				<li> HD Movie of 2 phases </li>
+				<li> Polaroid + 3 Prints </li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<button class="btn btn-secondary"><b> Select </b> </button>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- ************JAVA************* -->
+<!-- scrollnavbar -->
+<script>
+$(window).scroll(function(){
+	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+</script>
+<!---sidebar for mobilemenu ---->
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "100px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
 <!-- JS -->
-<!--owlcarousel <script src="lib/jquery/jquery-3.5.1.min.js"></script>
+<script src="lib/jquery/jquery-3.5.1.min.js"></script>
 <script src="lib/owlCarousel/dist/owl.carousel.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.owl-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-    		loop:false,
-    		margin:0,
-    		nav: false,
-    		responsive:{
+		$('.owl-carousel').owlCarousel({	
+			stagePadding: 50,
+   			loop:true,
+   			margin:40,
+   			nav:false,
+   			responsive:{
        			0:{
        			    items:1
        			},
        			600:{
-       			    items:1
+       			    items:3
        			},
        			1000:{
-       			    items:1
+       			    items:5
        			}
-    		}
+   			}
 		})
 	});
-</script> -->
-
-<script>
-	function openNav() {
-  		document.getElementById("mySidebar").style.width = "250px";
-  		document.getElementById("main").style.marginLeft = "100px";
-	}
-
-	function closeNav() {
-  		document.getElementById("mySidebar").style.width = "0";
-  		document.getElementById("main").style.marginLeft= "0";
-	}
-</script>
-
-<script>
-	function openSobre() {
-		document.getElementById("Sobre").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeSobre() {
-		document.getElementById("Sobre").style.width = "0";
-		document.getElementById("opacity").style.opacity = "1";
-	}
 
 </script>
-
-<script>
-	function openProj1() {
-		document.getElementById("projeto1").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeProj1() {
-		document.getElementById("projeto1").style.width = "0";
-		document.getElementById("opacity").style.opacity = "1";
-	}
-
-	function openProj2() {
-		document.getElementById("projeto2").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeProj2() {
-		document.getElementById("projeto2").style.width = "0";
-		document.getElementById("opacity").style.opacity = "1";
-	}
-	function openProj3() {
-		document.getElementById("projeto3").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeProj3() {
-		document.getElementById("projeto3").style.width = "0";
-		document.getElementById("opacity").style.opacity = "1";
-	}
-
-	function openProj4() {
-		document.getElementById("projeto4").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeProj4() {
-		document.getElementById("projeto4").style.width = "0";
-		document.getElementById("opacity").style.opacity = "1";
-	}
-
-	function openProj5() {
-		document.getElementById("projeto5").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeProj5() {
-		document.getElementById("projeto5").style.width = "0"
-		document.getElementById("opacity").style.opacity = "1";
-	}
-
-	function openCont() {
-		document.getElementById("contatos").style.width = "600px";
-		document.getElementById("opacity").style.opacity = "0.5";
-	}
-
-	function closeCont() {
-		document.getElementById("contatos").style.width = "0"
-		document.getElementById("opacity").style.opacity = "1";
-	}
-
-	function nextProject12() {
-		document.getElementById("projeto1").style.width = "0";
-		document.getElementById("projeto2").style.width = "600px";
-	}
-
-	function nextProject23() {
-		document.getElementById("projeto2").style.width = "0";
-		document.getElementById("projeto3").style.width = "600px";
-	}
-
-	function nextProject34() {
-		document.getElementById("projeto3").style.width = "0";
-		document.getElementById("projeto4").style.width = "600px";
-	}
-
-	function nextProject45() {
-		document.getElementById("projeto4").style.width = "0";
-		document.getElementById("projeto5").style.width = "600px";
-	}
-
-	function prevProject21(){
-		document.getElementById("projeto1").style.width = "600px";
-		document.getElementById("projeto2").style.width = "0";
-	}
-
-	function prevProject32(){
-		document.getElementById("projeto3").style.width = "0";
-		document.getElementById("projeto2").style.width = "600px";
-	}
-
-	function prevProject43(){
-		document.getElementById("projeto4").style.width = "0";
-		document.getElementById("projeto3").style.width = "600px";
-	}
-
-	function prevProject54(){
-		document.getElementById("projeto5").style.width = "0";
-		document.getElementById("projeto4").style.width = "600px";
-	}
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+  $(".owl-carousel").each(function(index, el) {
+    var containerHeight = $(el).height();
+    $(el).find("img").each(function(index, img) {
+      var w = $(img).prop('naturalWidth');
+      var h = $(img).prop('naturalHeight');
+      $(img).css({
+        'width': Math.round(containerHeight * w / h) + 'px',
+        'height': containerHeight + 'px'
+      });
+    }),
+    $(el).owlCarousel({
+      autoWidth: true
+    });
+  });
+});
 </script>
-	
 
 </body>
-<footer>
 
+<footer>
+<div class="container">
+	<div class="footer-widgets">
+		<div class="row">
+        	<!--col-md-3-->
+        	<!-- FOOTER COLUMN 1 -->
+        	<div class="col-md-3">
+        	  <div class="foo-block">
+        	    <div id="text-3" class="widget widget-footer widget_text">
+        	      <h5 class="widgettitle"><span>Address</span></h5>
+        	      <div class="textwidget">
+        	        <p>
+        	          Address, number<br />
+        	          City, Country
+        	          Zip Code: 00000-0
+        	        </p>
+        	        <p>
+        	          P: +00 0000 000 0000<br />
+        	          E: email@email.com
+        	        </p>
+        	      </div>
+        	    </div>
+        	  </div>
+        	  <!--foo-block-->
+       	 	</div> 
+            <!--col-md-3-->
+        	<div class="col-md-3">
+            	<div class="foo-block foo-last">
+              		<div id="text-5" class="widget widget-footer widget_text">
+                		<h5 class="widgettitle"><span>Social Network</span></h5>
+                		<div class="textwidget">
+                  		<ul>
+                    		<a class="social-facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        					<a class="social-youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          					<a class="social-instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+           				</ul>
+                	</div>
+              	</div>
+            </div>
+              <!--foo-block-->
+            </div>
+            <!--col-md-3-->
+            
+          </div>
+          <!--row-->
+        </div>
+        <!-- footer-widgets -->
+        <div class="copyright">
+          <!-- COPYRIGHT -->
+          <div class="footer-copy">
+            <p>Copyright © 2019</p>
+          </div>
+        <!--copyright-->
+      </div>	
 </footer>
 </html>
